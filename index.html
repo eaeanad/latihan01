@@ -1,46 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nadiacss</title>
-</head>
-<body>
-    <h1>selamat datang di web pacar renjun</h1>
-</body>
-</html>
-<body>
-    <header>
-        <h1>Header</h1>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur HTML & CSS Flex</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
 
+      .container {
+        display: flex;
+        flex-direction: column; /* Susun item secara vertikal secara default */
+      }
+
+      .header {
+        border: black 2px solid;
+        border-radius: 10px;
+        background-color: #b5e3e9;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .main-content {
+        display: flex;
+        gap: 10px; /* Jarak antar item flex */
+        margin-bottom: 10px;
+      }
+
+      .navigation {
+        background-color: #eef7be;
+        padding: 15px;
+        width: 200px;
+      }
+
+      .articles {
+        display: flex;
+        flex-direction: column; /* Susun artikel secara vertikal */
+        gap: 10px;
+        flex-grow: 1; /* Membuat area artikel mengisi ruang yang tersedia */
+        background-color: #d4b7e6;
+      }
+
+      .article {
+        background-color: #fff0e0;
+        padding: 15px;
+      }
+
+      .footer {
+        background-color: #cab6b6;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .navigation ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navigation li {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <nav>
-            <h2>Navigation</h2>
-            <ul>
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-            </ul>
+      <header class="header">Struktur HTML & CSS Flex</header>
+      <div class="main-content">
+        <nav class="navigation">
+          <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+          </ul>
         </nav>
-
-        <main class="articles">
-            <article>
-                <h2>Article 1</h2>
-                <p>Konten artikel pertama...</p>
-            </article>
-            <article>
-                <h2>Article 2</h2>
-                <p>Konten artikel kedua...</p>
-            </article>
-            <article>
-                <h2>Article 3</h2>
-                <p>Konten artikel ketiga...</p>
-            </article>
-        </main>
+        <div class="articles">
+          <article class="article">
+            <h3>Article 1</h3>
+            <p>Konten artikel pertama...</p>
+          </article>
+          <article class="article">
+            <h3>Article 2</h3>
+            <p>Konten artikel kedua...</p>
+          </article>
+          <article class="article">
+            <h3>Article 3</h3>
+            <p>Konten artikel ketiga...</p>
+          </article>
+        </div>
+      </div>
+      <footer class="footer">Footer</footer>
     </div>
-
-    <footer>
-        <p>Footer</p>
-    </footer>
-</body>
+  </body>
+</html>
